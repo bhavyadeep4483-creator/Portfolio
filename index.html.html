@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavyadeep Singh | Game Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        engine: {
+                            dark: '#0b0f19',
+                            card: '#131c2e',
+                            accent: '#10b981',
+                            neon: '#34d399',
+                            glow: 'rgba(16, 185, 129, 0.15)'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .glow-box { box-shadow: 0 0 25px rgba(16, 185, 129, 0.12); }
+        .glow-text { text-shadow: 0 0 12px rgba(52, 211, 153, 0.4); }
+        .scanlines {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 3px, 6px 100%;
+        }
+    </style>
+</head>
+<body class="bg-engine-dark text-slate-100 min-h-screen selection:bg-emerald-500 selection:text-black relative overflow-x-hidden">
+
+    <!-- Background Grid & Particles Effect -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-20 scanlines"></div>
+    <div class="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:32px_32px] opacity-10"></div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-engine-dark/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-orbitron text-xl font-bold tracking-wider text-emerald-400 flex items-center gap-3">
+                <i class="fa-solid fa-gamepad text-emerald-500 animate-pulse"></i>
+                BHAVYADEEP<span class="text-white">.DEV</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-emerald-400 transition">About</a>
+                <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-emerald-400 transition">Games</a>
+                <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-500 text-black font-semibold text-sm hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20">
+                <i class="fa-solid fa-paper-plane"></i> Let's Talk
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 pb-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 z-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Unity Game Developer & Gameplay Programmer
+                </div>
+                <h1 class="font-orbitron text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                    Crafting Immersive <span class="text-emerald-400 glow-text">Game Mechanics</span> & Worlds
+                </h1>
+                <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
+                    Hi, I'm <strong class="text-white">Bhavyadeep Singh</strong>. Indie game developer specializing in C# gameplay scripting, AI navigation, physics interaction, and atmospheric mechanics.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 rounded-xl bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition flex items-center gap-2 shadow-lg shadow-emerald-500/25">
+                        <i class="fa-solid fa-gamepad"></i> Explore My Games
+                    </a>
+                    <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition flex items-center gap-2">
+                        <i class="fa-solid fa-id-card"></i> Get in Touch
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="w-72 h-72 sm:w-96 sm:h-96 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-slate-900 border border-emerald-500/30 p-4 glow-box flex items-center justify-center relative group">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(16,185,129,0.1),transparent_70%)]"></div>
+                    <div class="text-center z-10 space-y-4">
+                        <div class="w-24 h-24 mx-auto rounded-full bg-emerald-500/10 border border-emerald-500/40 flex items-center justify-center text-emerald-400 text-4xl shadow-inner">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="font-orbitron font-bold text-xl text-white">Unity Engine C#</h3>
+                        <p class="text-xs text-slate-400">Custom Controllers, AI NavMesh, Triggers, & Inventory Architecture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Stats -->
+    <section id="about" class="py-20 px-6 border-t border-slate-800/80 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <h2 class="font-orbitron text-3xl font-bold">About <span class="text-emerald-400">Me</span></h2>
+                <p class="text-slate-300 leading-relaxed">
+                    I am a passionate game developer dedicated to building engaging player experiences from the ground up. From tight platforming mechanics and inventory puzzles to open-world survival horror environments, I focus on writing clean, modular C# code and robust game systems.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+                        <span class="block font-orbitron text-3xl font-extrabold text-emerald-400">3</span>
+                        <span class="text-xs text-slate-400 mt-1 block">Playable Titles Built</span>
+                    </div>
+                    <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+                        <span class="block font-orbitron text-3xl font-extrabold text-emerald-400">90%</span>
+                        <span class="text-xs text-slate-400 mt-1 block">Gameplay Scripting (C#)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-white">Mechanics & Controllers</h3>
+                    <p class="text-xs text-slate-400">Custom player controllers, physics raycasting, vehicle wheel colliders, and triggers.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-white">AI & Systems</h3>
+                    <p class="text-xs text-slate-400">NavMesh enemy artificial intelligence, loot drop probability tables, and state management.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                        <i class="fa-solid fa-window-maximize"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-white">UI & Narrative</h3>
+                    <p class="text-xs text-slate-400">Typewriter text dialogue systems, interactive keypad password puzzles, and dynamic UI management.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3 class="font-orbitron font-semibold text-white">World Building</h3>
+                    <p class="text-xs text-slate-400">Terrain tool configuration, asynchronous scene management, and dynamic digging systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="font-orbitron text-3xl font-bold">Skills & <span class="text-emerald-400">Tech Stack</span></h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Core game engine architecture, scripting languages, and toolsets utilized across projects.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill 1 -->
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-orbitron font-semibold text-white">Gameplay Scripting (C#)</span>
+                        <span class="text-emerald-400 font-bold text-sm">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-orbitron font-semibold text-white">Unity Engine & Physics</span>
+                        <span class="text-emerald-400 font-bold text-sm">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-orbitron font-semibold text-white">AI NavMesh & Pathfinding</span>
+                        <span class="text-emerald-400 font-bold text-sm">80%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-orbitron font-semibold text-white">UI/UX & Dialogue Systems</span>
+                        <span class="text-emerald-400 font-bold text-sm">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-orbitron font-semibold text-white">Scene Management & Architecture</span>
+                        <span class="text-emerald-400 font-bold text-sm">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="p-6 rounded-2xl bg-engine-card border border-slate-800 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-orbitron font-semibold text-white">Inventory & Loot Tables</span>
+                        <span class="text-emerald-400 font-bold text-sm">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 border-t border-slate-800/80 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="font-orbitron text-3xl font-bold">Featured <span class="text-emerald-400">Games</span></h2>
+                <p class="text-slate-400 text-sm max-w-xl mx-auto">Explore my developed games highlighting custom mechanics, systems, and scripting.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Project 1: This House is Alive -->
+                <div class="rounded-2xl bg-engine-card border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-emerald-500/50 transition">
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">Game 1 • Unity 2D/3D</span>
+                            <i class="fa-solid fa-house-chimney text-emerald-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-emerald-400 transition">This House is Alive</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            An atmospheric exploration game featuring custom player movement controllers, trigger-based interactions, and a fridge inventory system.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">isTrigger Colliders</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">Scene Management</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">Fridge Inventory</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 space-y-3">
+                        <a href="https://bsrgamess.itch.io/this-house-is-alive" target="_blank" class="w-full py-2.5 rounded-xl bg-emerald-500 text-black font-semibold text-sm hover:bg-emerald-400 transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                            <i class="fa-solid fa-gamepad"></i> Play on Itch.io
+                        </a>
+                        <button onclick="openModal('modal1')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition flex items-center justify-center gap-2 border border-slate-700">
+                            <i class="fa-solid fa-circle-info"></i> Inspect Systems & Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Dino Run -->
+                <div class="rounded-2xl bg-engine-card border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-emerald-500/50 transition">
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">Game 2 • Endless Runner</span>
+                            <i class="fa-solid fa-person-running text-emerald-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-emerald-400 transition">Dino Run</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            An arcade-style endless runner featuring dynamic obstacle spawning, jump physics gravity scaling, high score tracking, and restart/menu UI flows.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">Obstacle Spawning</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">Jump Physics</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">Game Over States</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 space-y-3">
+                        <a href="https://bsrgamess.itch.io/dino-run" target="_blank" class="w-full py-2.5 rounded-xl bg-emerald-500 text-black font-semibold text-sm hover:bg-emerald-400 transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                            <i class="fa-solid fa-gamepad"></i> Play on Itch.io
+                        </a>
+                        <button onclick="openModal('modal2')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition flex items-center justify-center gap-2 border border-slate-700">
+                            <i class="fa-solid fa-circle-info"></i> Inspect Systems & Code
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3: WHERE AM I -->
+                <div class="rounded-2xl bg-engine-card border border-slate-800 overflow-hidden flex flex-col justify-between group hover:border-emerald-500/50 transition">
+                    <div class="p-6 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">Game 3 • Open-World Survival</span>
+                            <i class="fa-solid fa-tree text-emerald-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-orbitron text-xl font-bold text-white group-hover:text-emerald-400 transition">WHERE AM I</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A forest escape survival game featuring NavMesh enemy AI, car controllers with wheel colliders, raycast keypad password puzzles, and loot table drop systems.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">NavMesh AI</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">Wheel Colliders</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-xs">Keypad Raycasts</span>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 space-y-3">
+                        <a href="https://bsrgamess.itch.io/where-am-i" target="_blank" class="w-full py-2.5 rounded-xl bg-emerald-500 text-black font-semibold text-sm hover:bg-emerald-400 transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20">
+                            <i class="fa-solid fa-gamepad"></i> Play on Itch.io
+                        </a>
+                        <button onclick="openModal('modal3')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition flex items-center justify-center gap-2 border border-slate-700">
+                            <i class="fa-solid fa-circle-info"></i> Inspect Systems & Code
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 border-t border-slate-800/80">
+        <div class="max-w-4xl mx-auto bg-engine-card border border-slate-800 rounded-3xl p-8 sm:p-12 space-y-8">
+            <div class="text-center space-y-3">
+                <h2 class="font-orbitron text-3xl font-bold">Let's Build Something <span class="text-emerald-400">Awesome</span></h2>
+                <p class="text-slate-400 text-sm">Have a project, collaboration request, or position available? Send me a message!</p>
+            </div>
+            <form onsubmit="handleContact(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Your Name</label>
+                        <input type="text" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 text-sm" placeholder="John Doe">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Your Email</label>
+                        <input type="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 text-sm" placeholder="john@example.com">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Message</label>
+                    <textarea rows="4" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-emerald-500 text-sm" placeholder="Tell me about your project..."></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-emerald-500 text-black font-bold hover:bg-emerald-400 transition shadow-lg shadow-emerald-500/20 text-sm uppercase tracking-wider">
+                    Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+                <p id="form-msg" class="text-center text-emerald-400 text-sm hidden font-medium">Message sent successfully! I'll get back to you soon.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-slate-800/80 text-center text-slate-500 text-xs">
+        <p>&copy; 2026 Bhavyadeep Singh. Built with Unity, C#, & Tailwind CSS.</p>
+    </footer>
+
+    <!-- Modals for Projects -->
+    <!-- Modal 1 -->
+    <div id="modal1" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-engine-card border border-slate-800 max-w-2xl w-full rounded-2xl p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('modal1')" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <div class="space-y-2">
+                <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Project System Architecture</span>
+                <h3 class="font-orbitron text-2xl font-bold text-white">This House is Alive</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-300">
+                <p>Detailed technical breakdown of the systems implemented in this project:</p>
+                <ul class="space-y-2 list-disc list-inside text-slate-400">
+                    <li><strong class="text-white">isTrigger Colliders:</strong> Handled non-blocking area entry detection for pickups and trigger zones without physical rigid body collisions.</li>
+                    <li><strong class="text-white">Scene Management:</strong> Asynchronous scene loading and transition pipelines between the exterior house and interior exploration zones.</li>
+                    <li><strong class="text-white">Player Controller:</strong> Custom movement scripts managing velocity smoothing, input polling, and interaction states.</li>
+                    <li><strong class="text-white">Fridge Inventory Logic:</strong> Tracks item state collection. Once exactly 4 balls are collected, it triggers a teleportation sequence back to the house.</li>
+                </ul>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 font-mono text-xs text-emerald-400 overflow-x-auto">
+                <code>
+                    // C# Trigger & Inventory Condition Check<br>
+                    void OnTriggerEnter(Collider other) {<br>
+                    &nbsp;&nbsp;if(other.CompareTag("Ball")) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;inventoryCount++;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Destroy(other.gameObject);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if(inventoryCount >= 4) TeleportBackToHouse();<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </code>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-engine-card border border-slate-800 max-w-2xl w-full rounded-2xl p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('modal2')" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <div class="space-y-2">
+                <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Project System Architecture</span>
+                <h3 class="font-orbitron text-2xl font-bold text-white">Dino Run</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-300">
+                <p>Detailed technical breakdown of the systems implemented in Dino Run:</p>
+                <ul class="space-y-2 list-disc list-inside text-slate-400">
+                    <li><strong class="text-white">Obstacle Spawning:</strong> Procedural cactus and rock spawning system with adjustable interval rates and speed multipliers.</li>
+                    <li><strong class="text-white">Jump Physics:</strong> Custom gravity curve applied during player jumps to ensure responsive ground clearance and landing precision.</li>
+                    <li><strong class="text-white">Game Over State Handling:</strong> Pause mechanics, collision detection with obstacles, and instant transition to retry/menu UI panels.</li>
+                    <li><strong class="text-white">Button & UI Management:</strong> Clean event-driven UI flow for Main Menu, Gameplay HUD, and Restart triggers.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-engine-card border border-slate-800 max-w-2xl w-full rounded-2xl p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('modal3')" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <div class="space-y-2">
+                <span class="text-emerald-400 text-xs font-semibold uppercase tracking-wider">Project System Architecture</span>
+                <h3 class="font-orbitron text-2xl font-bold text-white">WHERE AM I</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-300">
+                <p>Detailed technical breakdown of the systems implemented in WHERE AM I:</p>
+                <ul class="space-y-2 list-disc list-inside text-slate-400">
+                    <li><strong class="text-white">NavMesh Enemy AI:</strong> Pathfinding agents configured to stalk and track the player across dense forest terrain.</li>
+                    <li><strong class="text-white">Car Controller & Wheel Colliders:</strong> Advanced vehicle physics handling suspension springs, torque application, and wheel rotation.</li>
+                    <li><strong class="text-white">Raycast Keypad Puzzle:</strong> Interactive password keypad using raycast hit detection to register code inputs.</li>
+                    <li><strong class="text-white">Loot Tables & Dig Spots:</strong> Randomly spawning dig spots configured with weighted loot drop chances.</li>
+                    <li><strong class="text-white">Dialogue & UI Lifecycle:</strong> Typewriter text effect for narrative delivery and auto-clearing UI message panels after timed delays.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.getElementById(modalId).classList.add('flex');
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('flex');
+            document.getElementById(modalId).classList.add('hidden');
+        }
+        function handleContact(e) {
+            e.preventDefault();
+            const msg = document.getElementById('form-msg');
+            msg.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => { msg.classList.add('hidden'); }, 5000);
+        }
+    </script>
+</body>
+</html>
